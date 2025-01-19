@@ -1,5 +1,11 @@
-import { useState } from "react"
+import { useState,useEffect, useContext } from "react"
+import React from "react"
 import { DataContext } from "./Form"
+import "../styles/Tray.css"
+import Bar from "./Bar"
+import BubbleSort from "../algos/BubbleSort"
+
+
 
 function Tray(props) {
 
@@ -12,6 +18,7 @@ function Tray(props) {
 
         if (document.getElementById("isSorted").value == "1") {
             return;
+            //the array is already sorted
         }
 
 
@@ -22,15 +29,23 @@ function Tray(props) {
 
             case "bubbleSort":
                 {
-
+                    //alert("Bubble sort");
+                    BubbleSort(props.data, props.setData, speed, jump);
                     break;
                 }
             case "selectionSort":
                 {
+                    alert("Selection sort")
                     break;
                 }
             case "insertionSort":
                 {
+                    alert("Insertion Sort")
+                    break;
+                }
+            case "cocktailShakerSort":
+                {   
+                    alert("Cocktail shaker sort")
                     break;
                 }
 
@@ -51,5 +66,8 @@ function Tray(props) {
                 }
             </div>
         </div>
-    </React.Fragment>)
+    </React.Fragment>
+    );
 }
+
+export default Tray;

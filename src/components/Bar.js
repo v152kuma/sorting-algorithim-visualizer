@@ -1,3 +1,8 @@
+
+import React from "react";  
+import "../main.css";
+import "../styles/Bar.css";
+
 function Bar(props) {
  
 const barHeight = String((props.value / props.length) * 100) + '%';

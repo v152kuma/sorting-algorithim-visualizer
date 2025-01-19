@@ -1,4 +1,7 @@
 import { createContext, useEffect , useState} from "react";
+import React from "react";
+import Tray from "./Tray";
+import "../styles/Form.css"
 
 export const DataContext = createContext();
 function Form(){
@@ -73,7 +76,7 @@ return(
     </div>
 
   </React.Fragment>
-)
+);
 }
 
 export default Form;
